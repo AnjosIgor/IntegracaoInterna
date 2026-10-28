@@ -1,0 +1,218 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: SAGRES_DEV
+meta:
+  id: wrk_dd87c7c321604d5d83f039a0a395f9a5
+  created: 1792676561029
+  modified: 1792676561029
+  description: ""
+collection:
+  - name: Publicado
+    meta:
+      id: fld_638f915f33a842b6a6f7488945fe54ff
+      created: 1792676896914
+      modified: 1792676896914
+      sortKey: -1792676896914
+      description: ""
+    children:
+      - url: "{{ _.pubBaseURL }}/api/rest/sagres/ReceberInstrucaoEmb"
+        name: ReceberInstrucaoEmb
+        meta:
+          id: req_266c55c9b3f84b0e9d13d71294bec1f7
+          created: 1792676566011
+          modified: 1792678820194
+          isPrivate: false
+          description: ""
+          sortKey: -1792676899302
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "ImoNavio": "2610213",
+              "CodigoPorto": "BRVIX",
+              "CodMaterial": "CR3033",
+              "Delivery": "SAG120IG26102201",
+              "Due": "26102201",
+              "CodQualMaterial": "A2",
+              "QtdMercadoria": 2,
+              "TipoOperacao": 1,
+              "Booking": "IG26102201",
+              "TipoContainer": 40,
+              "Versao": "1",
+              "Caracteristica": []
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: Bearer {{ _.authDEV }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.pubBaseURL }}/api/Rest/Sagres/ReceberPRBarcaca"
+        name: ReceberPRBarcaca
+        meta:
+          id: req_99232cd9d02d46f29478dd6a0ff743d7
+          created: 1793015461202
+          modified: 1793049900212
+          isPrivate: false
+          description: ""
+          sortKey: -1793015473264
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              //"ImoBarcaca": "0001200",
+            	"ImoBarcaca": "2604018",
+              "CodigoViagem": "2610V1",
+              "CaladoProa": "6.00",
+              "CaladoPopa": "6.00",
+              "Observacao": "SEM OBSERVAÇÕES",
+              "ListaPorao": [
+                {
+                  "CodigoPorao": 1,
+                  "DCs": {
+                    "ListaDCs": [
+                        {
+                      "CnpjCliente":  "05291903000192",
+                      "NcmTipoMercadoria": "3912",
+                      "CodMaterial": "CR3033",
+                      "DescMaterial": "A-CR3033",
+                      "CodQualidade": "A",
+                      "TipoDocumento": "DELIVERY",
+                      "CodigoDocumento": "SAG122OPEN01",
+                      "Caracteristica": [
+                      ],
+                      "Unidades": [
+                        {
+                          "CodigoUnidade": "SAG122OPEN101",
+                          "PesoUnidade": 2.001
+                        },
+                        {
+                          "CodigoUnidade": "SAG122OPEN102",
+                          "PesoUnidade": 2.001
+                        },
+                        {
+                          "CodigoUnidade": "SAG122OPEN103",
+                          "PesoUnidade": 2.001
+                        },
+                        {
+                          "CodigoUnidade": "SAG122OPEN104",
+                          "PesoUnidade": 2.001
+                        }
+                       ]
+                     }
+                    ]
+                 }
+                }
+              ]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: Bearer {{ _.authDEV }}
+            description: ""
+            disabled: false
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Local
+    meta:
+      id: fld_e28065eb263843939bd873cfe1f1e65c
+      created: 1792678422643
+      modified: 1792678422643
+      sortKey: -1792676896864
+      description: ""
+    children:
+      - url: "{{ _.locBaseIP }}/api/rest/sagres/ReceberInstrucaoEmb"
+        name: ReceberInstrucaoEmb
+        meta:
+          id: req_09b68ecca5684cefabd8980a55d64f27
+          created: 1792678422643
+          modified: 1792678814865
+          isPrivate: false
+          description: ""
+          sortKey: -1792676899302
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "ImoNavio": "2610213",
+              "CodigoPorto": "BRVIX",
+              "CodMaterial": "CR3033",
+              "Delivery": "SAG120IG26102201",
+              "Due": "26102201",
+              "CodQualMaterial": "A2",
+              "QtdMercadoria": 2,
+              "TipoOperacao": 1,
+              "Booking": "IG26102201",
+              "TipoContainer": 40,
+              "Versao": "1",
+              "Caracteristica": []
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: Bearer {{ _.authDEV }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0bca656683e1a13e64334d0c6c9db4581f0501cf
+    created: 1792676561069
+    modified: 1792679299016
+  cookies:
+    - id: 20cc4fba-7166-40d0-b99d-90a54968b3e5
+      key: ASP.NET_SessionId
+      value: 5r2b2kwpwz4snexgwi2ql0qh
+      domain: openportin.ip.odhserver.com
+      path: /
+      secure: false
+      httpOnly: true
+      hostOnly: true
+    - id: 7dc3f0c7-514d-4ab8-ba7f-33c5792c849f
+      key: ASP.NET_SessionId
+      value: 4j52ick2ddpdok0oqy1v4s4s
+      domain: localhost
+      path: /
+      secure: false
+      httpOnly: true
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_0bca656683e1a13e64334d0c6c9db4581f0501cf
+    created: 1792676561063
+    modified: 1792678790200
+    isPrivate: false
+  data:
+    pubBaseURL: http://openportin.ip.odhserver.com/optos/dev/sagres/sgp.integracao
+    locBaseIP: http://localhost:59991
